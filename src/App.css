@@ -1,5 +1,11 @@
 .App {
+  height: 100vh;
+  padding-top: 30px;
+  font-size: 40px;
   text-align: center;
+  background-color: #282c34;
+  color: white;
+  font-family: monospace;
 }
 
 .App-logo {
