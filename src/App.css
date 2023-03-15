@@ -1,15 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap');
 .App {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   height: 100vh;
   padding-top: 30px;
   font-size: 40px;
   text-align: center;
-  background-color: #282c34;
+  background-color: #35654d;
   color: white;
-  font-family: monospace;
+  font-family: 'Megrim', cursive;
+  
 }
 
 .buttons {
@@ -31,9 +35,20 @@
   height: 150px;
   width: 350px;
   border: white 2px solid ;
-  background-color: #282c34;
-  font-family: monospace;
+  background-color: #35654d;
+  font-family: inherit;
   color: white;
   margin: 100px;
   font-size: 30px;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+}
+
+.card{
+  transform: rotate(30deg);
+}
+.card2 {
+  transform: rotate(-30deg);
 }

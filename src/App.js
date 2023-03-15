@@ -2,7 +2,7 @@
 import './App.css';
 import {useState } from 'react';
 import Game from './Game';
-
+import ReactCurvedText from 'react-curved-text'
 
 function App() {
   
@@ -10,7 +10,27 @@ function App() {
   const [started,setStarted] = useState(false)
   return (
     <div >
-      {!started ? <div className="App"> High Low Card game <button onClick={()=>{setStarted(true)}} className='started'>Start Game</button> </div>  : <Game />}
+      {!started ? <div className="App">
+        <img className='card2' src='https://deckofcardsapi.com/static/img/KH.png' ></img>
+        <div className='main'><ReactCurvedText width='600'
+          height={300}
+          cx='300'
+          cy='246'
+          rx='157'
+          ry='145'
+          startOffset='90 '
+          reversed={true}
+          text='High Low Card game'
+          textProps={{"style": {"fontSize": "50"}}}
+          textPathProps={{"fill": "#FFF"}}
+          tspanProps={null}
+          ellipseProps={null}
+          svgProps={null} 
+        /> 
+  <button onClick={()=>{setStarted(true)}} className='started'>Start Game</button></div>
+  <img className='card' src='https://deckofcardsapi.com/static/img/AS.png' ></img>
+         </div>  
+         : <Game />}
     </div>
   );
 }

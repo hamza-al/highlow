@@ -25,10 +25,13 @@ function Game() {
       'QUEEN':12,
       'KING':13
     }
-    //Defining state variables needed
+    // Variables for managing the deck and cards
     const [deck, setDeck] = useState('')
     const [card,setCard] = useState('ok')
     const [pile,setPile] = useState(0)
+
+
+    // Variables for game and score
 
     const [player,setPlayer] = useState(true)
     const [scoreOne,setScoreOne] = useState(0)
@@ -80,11 +83,11 @@ function Game() {
     return (<div className='game'>
       <div className='header'>
         <div> P1 score: {scoreOne} <br></br> P2 score: {scoreTwo} </div>
-        <div></div>
+        <div>high low card game</div>
         <div> P{player ? '1' : '2'}'s turn <br></br> Pile size: {pile}</div>
       </div>
       <div className='cards'>
-        <img src={card['image']} alt='card'></img>
+        <img className='deck' src={card['image']} alt='card'></img>
 
         <img src={'https://deckofcardsapi.com/static/img/back.png'} alt='card'></img>
       </div>
@@ -107,7 +110,7 @@ function Game() {
               changePlayer()
             }
         }}>
-                high
+                higher
             </button>
             {
               pile >= 3 ? <button onClick={()=>{changePlayer()}} className='button'> Pass</button> : null
@@ -129,7 +132,7 @@ function Game() {
               }
 
             }}>
-                low
+                lower
             </button>
             </div>
     </div>)
